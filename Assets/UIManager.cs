@@ -31,19 +31,36 @@ public class UIManager : MonoBehaviour
         switch(controller .Gear)
         {
             case 0:
-                gearText.text = "N";
-                break;
-            case -1:
                 gearText.text = "R";
                 break;
-
+            case 1:
+                gearText.text = "N";
+                break;
+            case 2:
+                gearText.text = "1";
+                break;
+            case 3:
+                gearText.text = "2";
+                break;
+            case 4:
+                gearText.text = "3";
+                break;
+            case 5:
+                gearText.text = "4";
+                break;
+            case 6:
+                gearText.text = "5";
+                break;
+            case 7:
+                gearText.text = "6";
+                break;
         }
-        gearText.text = controller.Gear switch
-        {
-            0 => "N",
-            -1 => "R",
-            _ => controller.Gear.ToString()
-        };
+        //gearText.text = controller.Gear switch
+        //{
+        //    0 => "N",
+        //    -1 => "R",
+        //    _ => controller.Gear.ToString()
+        ///};
        speedText.text = controller.speed.ToString();
         rpmText.text = controller.rpm.ToString("f0");
 

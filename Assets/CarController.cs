@@ -16,14 +16,15 @@ public class CarController : MonoBehaviour
     public readonly float RevLimit = 7500;
     public float gearratio;
     public bool stopAccelFlag;
-    public  float minRPM;
+    public float minRPM;
     public float maxRPM;
     public float rpm_rate;
+    public float[] gearratios;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Gear = 1;
     }
 
     // Update is called once per frame
@@ -65,10 +66,12 @@ public class CarController : MonoBehaviour
                 rpm = speed / gearratio;
             }
         }
-        Gear = Mathf.Clamp(Gear, -1, 6);
+        Gear = Mathf.Clamp(Gear, 0, 7);
         rpm_rate = (rpm - minRPM) / (maxRPM - minRPM) * 100;
     }
+
 }
+
     
         //rpm = Mathf.Clamp(rpm, 1877, 7500);
     
