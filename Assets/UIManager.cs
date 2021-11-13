@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
     public Text gearText;
     public Text speedText;
     public Text rpmText;
-    public CarController controller;
+    public CarController1 controller;
     public GameObject[] rpm_light;
     public float light_on_time;
     public float light_off_time;

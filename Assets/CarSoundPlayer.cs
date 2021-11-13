@@ -5,7 +5,7 @@ using UnityEngine;
 public class CarSoundPlayer : MonoBehaviour
 
 {
-    public CarController controller;
+    public CarController1 controller;
     public AudioSource audioSource;
     public AudioClip bumpSE;
     public float t;
