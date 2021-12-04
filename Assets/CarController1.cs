@@ -53,7 +53,7 @@ public class CarController1 : MonoBehaviour
         }
         rpm = Mathf.Clamp(rpm, 1877, 7700);
 
-        if (Input.GetKeyDown(KeyCode.Keypad9))
+        if (Input.GetKeyDown(KeyCode.Keypad9)|| Input.GetKeyDown(KeyCode.E))
         {
             Gear++;
             if (speed >= 10)
@@ -61,7 +61,7 @@ public class CarController1 : MonoBehaviour
                 rpm = speed / gearratio;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Keypad7))
+        if (Input.GetKeyDown(KeyCode.Keypad7)|| Input.GetKeyDown(KeyCode.Q))
         {
             Gear--;
             if (speed >= 10)
